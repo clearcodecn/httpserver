@@ -22,7 +22,7 @@ func main() {
 		writer.Write([]byte(name))
 	})
 
-	http.Handle("/static",http.FileServer(http.Dir(statidDir)))
+	http.Handle("/static",http.FileServer(http.Dir(staticDir)))
 
 
 	http.ListenAndServe(addr, nil)
